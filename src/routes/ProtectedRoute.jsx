@@ -1,3 +1,4 @@
+// src/routes/ProtectedRoute.jsx
 
 import React, { useEffect } from 'react';
 import { useAtom } from 'jotai';
@@ -9,14 +10,11 @@ const ProtectedRoute = ({ children }) => {
   const [, setUser] = useAtom(userAtom);
 
   useEffect(() => {
-    // Check if we have tokens in localStorage to restore session
     const accessToken = localStorage.getItem('accessToken');
     if (accessToken && !isAuthenticated) {
-      // If we have a token but not authenticated in state, restore the auth state
+
       setIsAuthenticated(true);
-      
-      // Optional: You could fetch user data here to restore the full user state
-      // This depends on if your API has an endpoint to get the current user
+
     }
   }, [isAuthenticated, setIsAuthenticated, setUser]);
 
