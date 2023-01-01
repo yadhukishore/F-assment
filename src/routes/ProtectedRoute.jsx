@@ -1,3 +1,4 @@
+// src/routes/ProtectedRoute.jsx
 
 import React, { useEffect } from 'react';
 import { useAtom } from 'jotai';
