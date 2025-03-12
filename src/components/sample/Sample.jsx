@@ -2,7 +2,11 @@ import React from 'react'
 
 const Sample = () => {
   return (
-    <div>Sample</div>
+    <div>
+      <h1>Sample</h1>
+      <p>Sample</p>
+
+    </div>
   )
 }
 
