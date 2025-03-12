@@ -8,7 +8,7 @@ import { isAuthenticatedAtom, userAtom } from '../atom';
 const ProtectedRoute = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useAtom(isAuthenticatedAtom);
   const [, setUser] = useAtom(userAtom);
-//Edaaa 4 days munba
+//Edaaa 4(naaalu divasm) days munba
   useEffect(() => {
     const accessToken = localStorage.getItem('accessToken');
     if (accessToken && !isAuthenticated) {
